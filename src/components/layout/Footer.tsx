@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ShieldCheck, ArrowRight } from 'lucide-react';
 import { contactData } from '../../data/contact';
 import { navigationItems } from '../../data/navigation';
-import { Logo } from '../common/Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -29,9 +28,6 @@ export const Footer: React.FC = () => {
         >
           {/* Column 1: Company Brand & Verified Credentials */}
           <div>
-            <div style={{ marginBottom: '1.25rem' }}>
-              <Logo variant="footer" />
-            </div>
             <p
               style={{
                 color: 'rgba(255, 255, 255, 0.75)',

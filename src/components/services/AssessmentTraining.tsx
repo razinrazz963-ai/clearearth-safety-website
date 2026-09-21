@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Award, CheckCircle2, ArrowRight, BookOpen, Users, X, SlidersHorizontal } from 'lucide-react';
+import { Search, Award, CheckCircle2, ArrowRight, BookOpen, Users, X } from 'lucide-react';
 import { Container } from '../common/Container';
 import { SectionTitle } from '../common/SectionTitle';
 import { Button } from '../common/Button';
@@ -331,48 +331,6 @@ export const AssessmentTrainingSection: React.FC = () => {
                   <X size={18} />
                 </button>
               )}
-
-              {/* Right-Side Filter Option */}
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  backgroundColor: 'var(--ce-white)',
-                  borderRadius: 'var(--ce-radius-full)',
-                  padding: '4px 14px',
-                  border: '1.5px solid var(--ce-border)',
-                  boxShadow: '0 1px 4px rgba(15, 39, 68, 0.08)',
-                  flexShrink: 0,
-                }}
-              >
-                <SlidersHorizontal size={15} color="var(--ce-green-primary)" />
-                <label htmlFor="category-select" style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--ce-navy-primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                  Filter:
-                </label>
-                <select
-                  id="category-select"
-                  aria-label="Filter by category"
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  style={{
-                    border: 'none',
-                    outline: 'none',
-                    backgroundColor: 'transparent',
-                    fontSize: '0.88rem',
-                    fontWeight: 700,
-                    color: 'var(--ce-navy-primary)',
-                    cursor: 'pointer',
-                    padding: '6px 2px',
-                  }}
-                >
-                  {trainingCategories.map((cat) => (
-                    <option key={cat} value={cat}>
-                      {cat}
-                    </option>
-                  ))}
-                </select>
-              </div>
             </div>
 
             {/* Category Filter Pills (Exact requested list) */}

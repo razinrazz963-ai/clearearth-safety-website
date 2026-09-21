@@ -157,3 +157,69 @@ button {
   white-space: nowrap;
   border-width: 0;
 }
+
+/* Hero Section Mobile Spacing */
+.hero-content {
+  padding-top: 4.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.hero-scroll-btn {
+  bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 3rem;
+    padding-bottom: 7.5rem !important; /* Generous clearance so Contact Us is not attached to Scroll Down */
+  }
+  .hero-scroll-btn {
+    bottom: 12px !important; /* Positioned lower down on mobile view */
+  }
+}
+
+/* Approvals Preview Responsive Card */
+.approval-preview-card {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  background-color: var(--ce-white);
+}
+
+.approval-preview-main {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.approval-preview-action {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .approval-preview-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .approval-preview-main {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .approval-preview-action {
+    width: 100%;
+  }
+
+  .approval-preview-action a,
+  .approval-preview-action button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+

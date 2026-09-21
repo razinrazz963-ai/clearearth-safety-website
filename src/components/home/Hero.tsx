@@ -53,15 +53,13 @@ export const Hero: React.FC = () => {
 
       {/* Hero Content — Clean, Centered, Authoritative */}
       <div
-        className="site-container animate-fade-in-up"
+        className="hero-content site-container animate-fade-in-up"
         style={{
           position: 'relative',
           zIndex: 10,
           textAlign: 'center',
           maxWidth: '920px',
           margin: '0 auto',
-          paddingTop: '4rem',
-          paddingBottom: '4rem',
         }}
       >
         {/* Prominent Visible ClearEarth Logo Pod */}
@@ -169,9 +167,9 @@ export const Hero: React.FC = () => {
       <button
         onClick={scrollToContent}
         aria-label="Scroll to main content"
+        className="hero-scroll-btn"
         style={{
           position: 'absolute',
-          bottom: '24px',
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 10,

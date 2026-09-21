@@ -43,64 +43,61 @@ export const ApprovalsPreview: React.FC = () => {
             {officialDocuments.slice(0, 2).map((doc) => (
               <div
                 key={doc.id}
-                className="ce-card"
-                style={{
-                  padding: '1.5rem',
-                  display: 'flex',
-                  gap: '1.25rem',
-                  alignItems: 'center',
-                  backgroundColor: 'var(--ce-white)',
-                }}
+                className="ce-card approval-preview-card"
               >
-                <div
-                  style={{
-                    width: '74px',
-                    height: '92px',
-                    borderRadius: 'var(--ce-radius-sm)',
-                    overflow: 'hidden',
-                    border: '1px solid var(--ce-border)',
-                    flexShrink: 0,
-                    backgroundColor: '#F1F5F9',
-                  }}
-                >
-                  <img
-                    src={doc.previewImage}
-                    alt={doc.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    loading="lazy"
-                  />
-                </div>
-
-                <div style={{ flex: 1 }}>
+                <div className="approval-preview-main">
                   <div
                     style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.35rem',
-                      fontSize: '0.725rem',
-                      fontWeight: 700,
-                      color: 'var(--ce-green-primary)',
-                      textTransform: 'uppercase',
-                      marginBottom: '4px',
+                      width: '74px',
+                      height: '92px',
+                      borderRadius: 'var(--ce-radius-sm)',
+                      overflow: 'hidden',
+                      border: '1px solid var(--ce-border)',
+                      flexShrink: 0,
+                      backgroundColor: '#F1F5F9',
                     }}
                   >
-                    <ShieldCheck size={14} />
-                    <span>Official Document</span>
+                    <img
+                      src={doc.previewImage}
+                      alt={doc.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      loading="lazy"
+                    />
                   </div>
-                  <h4 style={{ fontSize: '1.1rem', marginBottom: '4px', color: 'var(--ce-navy-primary)' }}>
-                    {doc.title}
-                  </h4>
-                  <div style={{ fontSize: '0.825rem', color: 'var(--ce-text-muted)', marginBottom: '0.5rem' }}>
-                    {doc.issuingAuthority}
-                  </div>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--ce-navy-primary)' }}>
-                    Scope: {doc.scope}
+
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.35rem',
+                        fontSize: '0.725rem',
+                        fontWeight: 700,
+                        color: 'var(--ce-green-primary)',
+                        textTransform: 'uppercase',
+                        marginBottom: '4px',
+                      }}
+                    >
+                      <ShieldCheck size={14} />
+                      <span>Official Document</span>
+                    </div>
+                    <h4 style={{ fontSize: '1.1rem', marginBottom: '4px', color: 'var(--ce-navy-primary)' }}>
+                      {doc.title}
+                    </h4>
+                    <div style={{ fontSize: '0.825rem', color: 'var(--ce-text-muted)', marginBottom: '0.5rem' }}>
+                      {doc.issuingAuthority}
+                    </div>
+                    <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--ce-navy-primary)' }}>
+                      Scope: {doc.scope}
+                    </div>
                   </div>
                 </div>
 
-                <Button to="/approvals" variant="outline" size="sm" icon={<ExternalLink size={14} />}>
-                  View
-                </Button>
+                <div className="approval-preview-action">
+                  <Button to="/approvals" variant="outline" size="sm" icon={<ExternalLink size={14} />}>
+                    View
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
